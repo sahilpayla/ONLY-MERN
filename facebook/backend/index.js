@@ -8,9 +8,13 @@ const app = express();
 
 mongoose.connect(process.env.uri)
    .then(() => {
-       console.log('Connected...')
+      console.log('Connected...')
    })
-   
+   .catch((error) => {
+      console.error(error.message);
+   });
+
+
 
 
 app.use(cors())
@@ -23,5 +27,5 @@ app.use("/auth", authRouter)
 
 
 app.listen(process.env.port, () => {
-   console.log(`Server ${process.env.port}`)
+   console.log(`Server is running at ${process.env.port}`)
 })
