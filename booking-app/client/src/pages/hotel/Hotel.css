@@ -40,12 +40,12 @@
   
   .hotelDistance {
     color: #0071c2;
-    font-weight: 500;
+    font-weight: bold;
   }
   
   .hotelPriceHighlight {
     color: #008009;
-    font-weight: 500;
+    font-weight: bold;
   }
   
   .hotelImages {

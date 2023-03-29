@@ -20,8 +20,9 @@
   }
   
   .mailInputContainer>button{
-    height: 50px;
-    background-color: #0071c2;
+    padding: 8px 10px;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2GFPSXKArnHJ54hEHv_EQ0iSHKJ3mzkMM9Q&usqp=CAU');
+    background-color: #000000;
     color: white;
     font-weight: 500;
     border: none;
