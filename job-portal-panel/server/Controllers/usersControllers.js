@@ -43,7 +43,7 @@ exports.userget = async (req, res) => {
     const status = req.query.status || ""
     const sort = req.query.sort || ""
     const page = req.query.page || 1
-    const ITEM_PER_PAGE = 4;
+    const ITEM_PER_PAGE = 6;
 
 
     const query = {
@@ -63,6 +63,8 @@ exports.userget = async (req, res) => {
         const skip = (page - 1) * ITEM_PER_PAGE  // 1 * 4 = 4
 
         const count = await users.countDocuments(query);
+        console.log(query);
+        console.log(count)
 
         const usersdata = await users.find(query)
             .sort({ datecreated: sort == "new" ? -1 : 1 })

@@ -11,7 +11,7 @@ const Headers = () => {
         <Container>
           <NavLink to="/" className="text-decoration-none text-light mx-2">Navbar</NavLink>
           <Nav className="me-auto">
-            <NavLink to="/" className="text-decoration-none text-light ">Home</NavLink>
+            <NavLink to="/register" className="text-decoration-none text-light ">Register</NavLink>
           </Nav>
         </Container>
       </Navbar>

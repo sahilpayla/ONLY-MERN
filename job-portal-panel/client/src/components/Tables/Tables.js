@@ -48,15 +48,15 @@ const Tables = ({ userdata, deleteUser, userGet, handlePrevious, handleNext, pag
                       return (
                         <>
                           <tr>
-                            <td>{index + 1 + (page - 1)*4}</td> 
-                            <td>{element.fname + element.lname}</td>
+                            <td>{index + 1 + (page - 1) * 6}</td>
+                            <td>{element.fname + " " +element.lname}</td>
                             <td>{element.email}</td>
-                            <td>{element.gender == "Male" ? "M" : "F"}</td>
+                            <td>{element.gender === "Male" ? "M" : "F"}</td>
                             <td className='d-flex align-items-center'>
                               <Dropdown className='text-center'>
                                 <Dropdown.Toggle className='dropdown_btn' id="dropdown-basic">
-                                  <Badge bg={element.status == "Active" ? "primary" : "danger"}>
-                                    {element.status} <i class="fa-solid fa-angle-down"></i>
+                                  <Badge bg={element.status === "Active" ? "primary" : "danger"}>
+                                    {element.status} <i className="fa-solid fa-angle-down"></i>
                                   </Badge>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
@@ -66,27 +66,29 @@ const Tables = ({ userdata, deleteUser, userGet, handlePrevious, handleNext, pag
                               </Dropdown>
                             </td>
                             <td className='img_parent'>
-                              <img src={`${BASE_URL}/uploads/${element.profile}`} alt="img" />
+                              <div className="image-capsule">
+                                <img src={`${BASE_URL}/uploads/${element.profile}`} alt="img" />
+                              </div>
                             </td>
                             <td>
                               <Dropdown>
                                 <Dropdown.Toggle variant='light' className='action' id="dropdown-basic">
-                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                                  <i className="fa-solid fa-ellipsis-vertical"></i>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
                                   <Dropdown.Item >
                                     <NavLink to={`/userprofile/${element._id}`} className="text-decoration-none">
-                                      <i class="fa-solid fa-eye" style={{ color: "green" }}></i> <span>View</span>
+                                      <i className="fa-solid fa-eye" style={{ color: "green" }}></i> <span>View</span>
                                     </NavLink>
                                   </Dropdown.Item>
                                   <Dropdown.Item >
                                     <NavLink to={`/edit/${element._id}`} className="text-decoration-none">
-                                      <i class="fa-solid fa-pen-to-square" style={{ color: "blue" }}></i> <span>Edit</span>
+                                      <i className="fa-solid fa-pen-to-square" style={{ color: "blue" }}></i> <span>Edit</span>
                                     </NavLink>
                                   </Dropdown.Item>
                                   <Dropdown.Item >
                                     <div onClick={() => deleteUser(element._id)}>
-                                      <i class="fa-solid fa-trash" style={{ color: "red" }}></i> <span>Delete</span>
+                                      <i className="fa-solid fa-trash" style={{ color: "red" }}></i> <span>Delete</span>
                                     </div>
                                   </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -95,7 +97,7 @@ const Tables = ({ userdata, deleteUser, userGet, handlePrevious, handleNext, pag
                           </tr>
                         </>
                       )
-                    }) : <div className='no_data text-center'>NO Data Found</div>
+                    }) : <div className='no_data text-center'>No Data Present With This Information</div>
                   }
 
 

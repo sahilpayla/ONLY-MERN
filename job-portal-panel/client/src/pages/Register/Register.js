@@ -128,7 +128,7 @@ const Register = () => {
 
     setTimeout(() => {
       setShowSpin(false)
-    }, 1200)
+    }, 100)
   }, [image])
 
 

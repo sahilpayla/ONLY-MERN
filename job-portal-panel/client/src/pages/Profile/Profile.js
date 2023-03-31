@@ -30,7 +30,7 @@ const Profile = () => {
     userProfileGet();
     setTimeout(() => {
       setShowSpin(false)
-    }, 1200)
+    }, 100)
   }, [id])
   return (
     <>

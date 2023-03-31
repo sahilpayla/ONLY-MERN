@@ -1,14 +1,18 @@
-.export_btn,.search_btn {
+.export_btn,
+.search_btn {
     background: #479C88;
     border: none;
 }
-.export_btn:hover,.search_btn:hover{
+
+.export_btn:hover,
+.search_btn:hover {
     background: #1f856d;
 }
+
 .dropdown_btn {
     background: none !important;
     border: none;
-    color: blue;
+    /* color: blue; */
     font-size: 20px;
 }
 
@@ -18,4 +22,51 @@
 
 .dropdown_btn:hover {
     color: blue !important;
+}
+
+.sort-btn {
+    margin-bottom: 0;
+    border-radius: 20px;
+    padding: 8px 50px;
+    font-size: 16px;
+    transition: .3s all ease;
+    color: black;
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    border:  none;
+    margin-bottom: 40px;
+}
+
+.sort-btn:hover {
+    color: white;
+    background-color: rgb(59, 59, 59);
+}
+
+.status-btn {
+    display: flex;
+    background-color: #479C88;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+}
+
+div.form-check {
+    width: 100px;
+    /* background-color: red; */
+}
+
+div.gender {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+}
+
+td {
+    text-align: center;
 }

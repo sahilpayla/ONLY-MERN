@@ -138,7 +138,7 @@ const Edit = () => {
     }
     setTimeout(() => {
       setShowSpin(false)
-    }, 1200)
+    }, 100)
   }, [image]);
 
 
