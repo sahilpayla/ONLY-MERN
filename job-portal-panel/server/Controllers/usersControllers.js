@@ -17,7 +17,7 @@ exports.userpost = async (req, res) => {
         const preuser = await users.findOne({ email: email });
 
         if (preuser) {
-            res.status(401).json("This user already exist in our databse")
+            res.status(401).json("This user already exist in our database")
         } else {
 
             const datecreated = moment(new Date()).format("YYYY-MM-DD hh:mm:ss");
@@ -63,8 +63,8 @@ exports.userget = async (req, res) => {
         const skip = (page - 1) * ITEM_PER_PAGE  // 1 * 4 = 4
 
         const count = await users.countDocuments(query);
-        console.log(query);
-        console.log(count)
+        // console.log(query);
+        // console.log(count)
 
         const usersdata = await users.find(query)
             .sort({ datecreated: sort == "new" ? -1 : 1 })

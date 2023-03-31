@@ -55,7 +55,7 @@ const Tables = ({ userdata, deleteUser, userGet, handlePrevious, handleNext, pag
                             <td className='d-flex align-items-center'>
                               <Dropdown className='text-center'>
                                 <Dropdown.Toggle className='dropdown_btn' id="dropdown-basic">
-                                  <Badge bg={element.status === "Active" ? "primary" : "danger"}>
+                                  <Badge bg={element.status === "Active" ? "success" : "danger"}>
                                     {element.status} <i className="fa-solid fa-angle-down"></i>
                                   </Badge>
                                 </Dropdown.Toggle>

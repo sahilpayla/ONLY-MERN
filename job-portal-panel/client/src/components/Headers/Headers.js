@@ -2,16 +2,18 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import './Headers.css';
 
 const Headers = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark" style={{ height: "50px" }}>
+      <Navbar className="navbar-main"
+      >
         <Container>
-          <NavLink to="/" className="text-decoration-none text-light mx-2">Navbar</NavLink>
+          <NavLink to="/" className="navbar home">Home</NavLink>
           <Nav className="me-auto">
-            <NavLink to="/register" className="text-decoration-none text-light ">Register</NavLink>
+            <NavLink to="/register" className="navbar register">Register</NavLink>
           </Nav>
         </Container>
       </Navbar>

@@ -71,13 +71,13 @@ const Register = () => {
     } else if (mobile === "") {
       toast.error("Mobile is Required !")
     } else if (mobile.length > 10) {
-      toast.error("Enter Valid Mobile!f")
+      toast.error("Enter Valid Mobile!")
     } else if (gender === "") {
       toast.error("Gender is Required !")
     } else if (status === "") {
       toast.error("Status is Required !")
     } else if (image === "") {
-      toast.error("Prfile is Required !")
+      toast.error("Profile is Required !")
     } else if (location === "") {
       toast.error("location is Required !")
     } else {
