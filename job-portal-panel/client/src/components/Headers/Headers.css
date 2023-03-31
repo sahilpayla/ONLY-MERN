@@ -1,5 +1,8 @@
+
 .navbar-main{
     background-color: rgb(0, 0, 0);
+    margin: 0;
+    width: 100%;
 }
 a.navbar{
     text-decoration: none;
